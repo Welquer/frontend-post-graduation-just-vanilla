@@ -1,0 +1,34 @@
+<style>
+  .image {
+    width: 100%;
+    height: 90%;
+    background-color: #f3f3f3;
+    display: flex;
+    justify-content: center;
+  }
+  .image-text {
+    align-self: center;
+  }
+</style>
+
+<div>
+  <div>
+    <text>Problema</text>
+    <select>
+      <option>Gato</option>
+      <option>Gambiarra</option>
+      <option>Cabo solto</option>
+    </select>
+  </div>
+  <div style="height: 300px">
+    <text>Imagem</text>
+    <input class="image-text" type="file" onchange="previewFile()"><br>
+    <div class="image">
+      <img id="img-preview" src="http://icons.iconarchive.com/icons/grafikartes/flat-retro-modern-2/512/preview-icon.png" height="100%" width="100%" alt="Image preview...">
+    </div>
+  </div>
+  <form action="index.html" method="get">
+    <input type="hidden" name="page" value="consulta-problema" />
+    <button class="button full" style="margin-top: 10px; float: right; width: 57px;" type="submit">ENVIAR</button>
+  </form>
+</div>

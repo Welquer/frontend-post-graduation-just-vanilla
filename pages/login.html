@@ -1,0 +1,28 @@
+<div class="login-background">
+  <form class="login-form" action="index.html" method="get">
+    <div style="text-align: center; color: white;">Login</div>
+    <!--<input class="input" placeholder="UC"/>-->
+    <!--<input class="input" placeholder="Senha"/>-->
+
+    <div class="group">
+      <input type="text" required>
+      <span class="highlight"></span>
+      <span class="bar"></span>
+      <label>UC</label>
+    </div>
+    <div class="group">
+      <input type="text" required>
+      <span class="highlight"></span>
+      <span class="bar"></span>
+      <label>Senha</label>
+    </div>
+
+    <input type="hidden" name="page" value="captura-problema" />
+    <button class="button full" style="margin-top: 10px;" type="submit">Login</button>
+    <button class="button full" onclick="alert('Vai encaminhar para uma tela de cadastro')">Cadastre-se</button>
+  </form>
+  <form action="index.html" method="get">
+    <input type="hidden" name="page" value="faq" />
+    <button class="button full faq" style="margin-top: 10px;" type="submit">FAQ</button>
+  </form>
+</div>

@@ -1,0 +1,90 @@
+<style>
+  .header {
+    position: absolute;
+    width: 100%;
+    height: 56px;
+    top: 0px;
+  }
+  .header .logo {
+    position: relative;
+    width: 50px;
+    height: 100%;
+    /*background-color: pink;*/
+    float: left;
+  }
+  .header .info-uc {
+    position: relative;
+    width: calc(100% - 50px);
+    height: 100%;
+    background-color: #670000;
+    float: right;
+    display: flex;
+    align-items: center;
+    color: white;
+  }
+  .sidenav {
+    position: absolute;
+    top: 56px;
+    width: 30%;
+    height: calc(100% - 56px);
+    background-color: #fff1f1;
+  }
+  .body {
+    position: absolute;
+    width: calc(100% - 30%);
+    height: calc(100% - 56px);
+    top: 56px;
+    /* background-color: blue; */
+    left: 30%;
+  }
+  .content {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+  }
+  @media (max-width: 600px) {
+    .sidenav {
+      display: none;
+    }
+    .body {
+      width: 100%;
+      left: 0px;
+    }
+  }
+</style>
+
+<div class="header">
+  <div class="logo">
+    <img style="width: 100%; height: 100%;" src="https://media.giphy.com/media/PiIFO8qF9e2XK/giphy.gif">
+  </div>
+  <div id="info-uc" class="info-uc"></div>
+</div>
+<div class="sidenav">
+  <form action="index.html" method="get">
+    <input type="hidden" name="page" value="captura-problema" />
+    <button id="menu-captura-problema" class="button full" style="margin-top: 10px;" type="submit">Captura Problema</button>
+  </form>
+  <form action="index.html" method="get">
+    <input type="hidden" name="page" value="consulta-problema" />
+    <button id="menu-consulta-problema" class="button full" style="margin-top: 10px;" type="submit">Consulta Problema</button>
+  </form>
+  <form action="index.html" method="get">
+    <input type="hidden" name="page" value="faq" />
+    <button class="button full" style="margin-top: 10px;" type="submit">FAQ</button>
+  </form>
+  <br>
+  <br>
+  <br>
+  <br>
+  <form action="index.html" method="get">
+    <input type="hidden" name="page" value="" />
+    <button class="button full" style="margin-top: 10px;" type="submit">Logout</button>
+  </form>
+</div>
+<div class="body">
+  <div class="content" include-html="subpage"></div>
+</div>
+<script>
+  includeHTML();
+  setCurrentPage();
+</script>
